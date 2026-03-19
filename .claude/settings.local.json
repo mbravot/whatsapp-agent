@@ -1,0 +1,27 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python3 --version)",
+      "Bash(python3 -c *)",
+      "Bash(pip install *)",
+      "Bash(pip3 install *)",
+      "Bash(mkdir -p *)",
+      "Bash(uvicorn *)",
+      "Bash(python tests/*)",
+      "Bash(python3 tests/*)",
+      "Bash(docker *)",
+      "Bash(docker compose *)",
+      "Bash(cp .env.example .env)",
+      "Bash(ls *)",
+      "Bash(git *)",
+      "Read",
+      "Write",
+      "Edit",
+      "Glob",
+      "Grep",
+      "Bash(python3.11 --version)",
+      "Bash(python3.12 --version)",
+      "Bash(\"C:/Users/migue/Downloads/whatsapp-agent/knowledge/.gitkeep\")"
+    ]
+  }
+}
