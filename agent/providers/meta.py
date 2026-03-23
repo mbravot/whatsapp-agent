@@ -5,7 +5,6 @@ import os
 import logging
 import httpx
 from fastapi import Request
-from fastapi.responses import PlainTextResponse
 from agent.providers.base import ProveedorWhatsApp, MensajeEntrante
 
 logger = logging.getLogger("agentkit")
@@ -28,7 +27,7 @@ class ProveedorMeta(ProveedorWhatsApp):
         challenge = params.get("hub.challenge")
         if mode == "subscribe" and token == self.verify_token:
             logger.info("Webhook de Meta verificado correctamente")
-            return PlainTextResponse(content=challenge)
+            return challenge  # main.py lo envuelve en PlainTextResponse
         logger.warning("Verificación de webhook Meta fallida")
         return None
 
